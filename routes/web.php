@@ -6,6 +6,8 @@ use App\Http\Controllers\UserController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::post('/user',[UserController::class,'store'])->name('user.store');
+Route::get('/user/create',[UserController::class,'create'])->name('user.create');
 Route::get('/user',[UserController::class,'index'])->name('user.index');
 
 Route::get('/dashboard', function () {

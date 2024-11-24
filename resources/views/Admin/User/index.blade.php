@@ -9,7 +9,7 @@
 
 <body>
     <p>Usuarios</p>
-
+    <a href="{{route('user.create')}}">Novo User</a>
     @forelse ($users as $user)
         <p>{{ $user->name }} - {{ $user->email }}</p>
     @empty
